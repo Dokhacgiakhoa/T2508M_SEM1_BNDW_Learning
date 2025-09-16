@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CV — Đỗ Khắc Gia Khoa</title>
+  <meta name="description" content="CV của Đỗ Khắc Gia Khoa — Học viên IT (FPT Aptech), định hướng Full-Stack. Quan tâm lập trình, công nghệ, marketing số & livestream."/>
+  <meta property="og:title" content="CV — Đỗ Khắc Gia Khoa"/>
+  <meta property="og:description" content="IT student & junior full-stack. Projects, skills, experience."/>
+  <meta property="og:type" content="profile"/>
+  <meta name="color-scheme" content="light dark">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg: #f5f6fb;
+      --text: #1f2937;
+      --muted:#6b7280;
+      --card:#ffffff;
+      --accent:#7c3aed; /* tím công nghệ */
+      --ok:#10b981;
+      --border:#e5e7eb;
+      --shadow: 0 10px 28px rgba(2,6,23,.08);
+      --radius: 16px;
+      --maxw: 1080px;
+    }
+    @media (prefers-color-scheme: dark){
+      :root{
+        --bg:#0b0f19;
+        --text:#e5e7eb;
+        --muted:#94a3b8;
+        --card:#121828;
+        --accent:#8b5cf6;
+        --border:#1f2937;
+        --shadow: 0 10px 28px rgba(0,0,0,.5);
+      }
+    }
+    /* Dark mode toggle (override) */
+    .theme-dark{
+      --bg:#0b0f19;
+      --text:#e5e7eb;
+      --muted:#94a3b8;
+      --card:#121828;
+      --accent:#8b5cf6;
+      --border:#1f2937;
+      --shadow: 0 10px 28px rgba(0,0,0,.5);
+    }
+
+    *{box-sizing:border-box} html,body{margin:0}
+    body{
+      font-family:"Nunito",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      background:var(--bg); color:var(--text); line-height:1.6;
+    }
+    .container{max-width:var(--maxw); margin:40px auto; padding:0 16px;}
+    .actions{
+      display:flex; gap:10px; justify-content:flex-end; margin-bottom:10px;
+    }
+    .btn{
+      appearance:none; border:1px solid var(--border); background:var(--card); color:var(--text);
+      padding:8px 12px; border-radius:10px; box-shadow:var(--shadow); cursor:pointer; font-weight:700;
+    }
+    .btn:hover{ border-color:var(--accent) }
+
+    header{
+      text-align:center; margin-bottom:24px;
+    }
+    .avatar{
+      width:112px; height:112px; margin:0 auto 12px; border-radius:999px; overflow:hidden;
+      display:grid; place-items:center; font-weight:800; font-size:32px; color:#fff;
+      background: radial-gradient(120% 120% at 20% 10%, #f59e0b 0%, #f43f5e 55%, var(--accent) 100%);
+      box-shadow: var(--shadow);
+    }
+    h1{ margin:8px 0 6px; font-size:36px; line-height:1.2; letter-spacing:.2px }
+    .tagline{ margin:0 auto 12px; color:var(--muted); max-width:740px }
+
+    .grid{ display:grid; gap:20px; grid-template-columns: repeat(2, minmax(0,1fr)); }
+    @media (max-width: 820px){ .grid{ grid-template-columns: 1fr; } }
+
+    .card{
+      background:var(--card); border:1px solid var(--border); border-radius:var(--radius);
+      box-shadow:var(--shadow); padding:22px 22px;
+    }
+    .card h3{
+      margin:0 0 12px; font-size:22px; border-bottom:1px solid var(--border); padding-bottom:8px;
+    }
+    .dl{ margin:0 }
+    .dl dt{ font-weight:700; width:160px; float:left; clear:left }
+    .dl dd{ margin:0 0 8px 170px; color:var(--text) }
+    .muted{ color:var(--muted) }
+
+    .ticks{ list-style:none; padding:0; margin:0 }
+    .ticks li{ position:relative; padding-left:26px; margin:8px 0 }
+    .ticks li::before{ content:"✔"; position:absolute; left:0; color:var(--ok); font-weight:800 }
+
+    .bar{ background:linear-gradient(90deg,var(--accent),#06b6d4); height:10px; border-radius:999px }
+    .bar-wrap{ background:#00000010; border:1px solid var(--border); border-radius:999px; height:10px; overflow:hidden }
+    .skill{ display:grid; grid-template-columns: 1fr 80px; align-items:center; gap:10px; margin:10px 0 }
+
+    /* ===== FIXED TIMELINE (không đè chữ) ===== */
+    .timeline{
+      position: relative;
+      padding-left: 36px;        /* tăng đệm trái để chừa chấm */
+    }
+    .timeline::before{
+      content:"";
+      position:absolute;
+      left: 16px;                /* căn giữa đường với chấm */
+      top: 6px; bottom: 6px;
+      width:2px;
+      background: var(--border);
+    }
+    .node{
+      position: relative;
+      margin: 0 0 16px;
+    }
+    .node::before{
+      content:"";
+      position:absolute;
+      left: -24px;               /* đẩy chấm ra ngoài vùng chữ */
+      top: .55em;
+      width:10px; height:10px;
+      border-radius:999px;
+      background: var(--accent);
+      box-shadow: 0 0 0 3px rgba(139,92,246,.25);
+    }
+    .role{ color:var(--muted); margin:.5rem 0 .25rem }
+    .node h4{ margin:.2rem 0 }
+
+    .tags{ display:flex; flex-wrap:wrap; gap:6px; margin-top:6px }
+    .tag{ font-size:12px; padding:4px 8px; border:1px solid var(--border); border-radius:999px; background:var(--card) }
+
+    footer{ text-align:center; color:var(--muted); margin:18px 0 }
+
+    /* Print styles */
+    @media print{
+      body{ background:white; color:black }
+      .actions, .btn{ display:none !important; }
+      .card{ box-shadow:none; page-break-inside:avoid }
+      .container{ margin:0; padding:0 }
+      a{ color:black; text-decoration:none }
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="root">
+    <div class="actions" aria-hidden="true">
+      <button class="btn" id="toggleTheme">🌗 Dark/Light</button>
+      <button class="btn" onclick="window.print()">🖨️ In / Lưu PDF</button>
+    </div>
+
+    <header>
+      <div class="avatar" aria-label="Avatar">GK</div>
+      <h1>Đỗ Khắc Gia Khoa</h1>
+      <p class="tagline">
+        Học viên IT (FPT Aptech) · Định hướng Full-Stack · Quan tâm công nghệ, marketing số & TikTok livestream
+      </p>
+
+      <!-- Liên hệ nhanh -->
+      <p class="muted">
+        📧 <a href="mailto:your@email" style="color:inherit">your@email</a>
+        &nbsp;•&nbsp; 📱 <a href="tel:+84-" style="color:inherit">+84 …</a>
+        &nbsp;•&nbsp; 📍 Hà Nội, Việt Nam
+        &nbsp;•&nbsp; 🔗 <a href="https://www.facebook.com/tarot.211" target="_blank" rel="noopener" style="color:inherit">Fanpage Loanh Quanh Tarot</a>
+      </p>
+    </header>
+
+    <!-- 2 cột: thông tin & kỹ năng -->
+    <section class="grid" aria-label="Thông tin & Kỹ năng">
+      <article class="card">
+        <h3>Thông tin cá nhân</h3>
+        <dl class="dl">
+          <dt>Họ tên</dt><dd>Đỗ Khắc Gia Khoa</dd>
+          <dt>Ngày sinh</dt><dd>06/06/1995</dd>
+          <dt>Tình trạng</dt><dd>Độc thân</dd>
+          <dt>Ngôn ngữ</dt><dd>Tiếng Anh</dd>
+          <dt>Địa chỉ</dt><dd>Hà Nội, Việt Nam</dd>
+        </dl>
+      </article>
+
+      <article class="card">
+        <h3>Kỹ năng & mức độ</h3>
+        <div class="skill"><div>C / Thuật toán cơ bản</div><div class="bar-wrap"><div class="bar" style="width:70%"></div></div></div>
+        <div class="skill"><div>HTML/CSS/JS</div><div class="bar-wrap"><div class="bar" style="width:65%"></div></div></div>
+        <div class="skill"><div>React / Next.js (cơ bản)</div><div class="bar-wrap"><div class="bar" style="width:45%"></div></div></div>
+        <div class="skill"><div>PHP / Laravel (MPAL)</div><div class="bar-wrap"><div class="bar" style="width:40%"></div></div></div>
+        <div class="skill"><div>SQL Server (MDSS)</div><div class="bar-wrap"><div class="bar" style="width:50%"></div></div></div>
+        <div class="tags">
+          <span class="tag">Git & GitHub</span>
+          <span class="tag">VS Code</span>
+          <span class="tag">Google Sheets / SEO</span>
+          <span class="tag">TikTok Live/PK</span>
+        </div>
+      </article>
+    </section>
+
+    <!-- Kinh nghiệm / hoạt động -->
+    <section class="card" style="margin-top:20px">
+      <h3>Kinh nghiệm & Hoạt động</h3>
+      <div class="timeline">
+        <div class="node">
+          <h4>FPT Aptech — ACCP</h4>
+          <p class="role">Học viên · 2025 – hiện tại</p>
+          <p>Học & thực hành: Foundations of C, Building Dynamic Website, Responsive UI/UX, SQL Server, PHP/Laravel, React…</p>
+        </div>
+        <div class="node">
+          <h4>ePRJ1 — Laravel & Web Design (dự án nhóm)</h4>
+          <p class="role">Vai trò: Backend/DB · 2025</p>
+          <p>Làm nhóm 4–5 người (Backend, Frontend, DB, Tester); lập kế hoạch & theo dõi bằng Google Sheets (Timeline/Tasks/Progress/Members).</p>
+        </div>
+        <div class="node">
+          <h4>Loanh Quanh Tarot — Livestream & Nội dung</h4>
+          <p class="role">Cộng tác nội dung · 2025</p>
+          <p>Xây quy trình TikTok Live (goal tim đội, túi quà, PK), tối ưu tiêu đề/thumbnail, cắt highlight sau live để tăng reach & chuyển đổi.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dự án -->
+    <section class="card" style="margin-top:20px">
+      <h3>Dự án nổi bật</h3>
+      <ul class="ticks">
+        <li><b>SEO Planner 30 ngày</b> — File Sheets theo dõi từ khóa, nội dung, backlink và KPI (Impression/CTR/Rank).</li>
+        <li><b>Web app huyền học</b> — Ý tưởng: tử vi/nhân số học, đặt lịch trả phí; tech: Next.js + NestJS + Postgres.</li>
+        <li><b>Portfolio/CV</b> — Trang CV này (dark mode, print/PDF, JSON-LD, responsive).</li>
+      </ul>
+    </section>
+
+    <!-- Học vấn & chứng chỉ -->
+    <section class="grid" style="margin-top:20px">
+      <article class="card">
+        <h3>Học vấn</h3>
+        <p><b>FPT Aptech — ACCP Sem 1</b> · 2025</p>
+        <p class="muted">Các môn: FPC, BNDW, RUS, RMWD, MDSS, MPAL, ePRJ1…</p>
+      </article>
+      <article class="card">
+        <h3>Chứng chỉ (dự kiến)</h3>
+        <ul class="ticks">
+          <li>Google Analytics (GA4) — cơ bản</li>
+          <li>Responsive Web Design — FreeCodeCamp</li>
+          <li>SQL (SQL Server) — cơ bản</li>
+        </ul>
+      </article>
+    </section>
+
+    <footer>
+      Cập nhật gần đây · <span id="updated"></span>
+    </footer>
+  </div>
+
+  <!-- Dark toggle + updated date -->
+  <script>
+    const root = document.getElementById('root');
+    const btn = document.getElementById('toggleTheme');
+    const key = 'cv-theme';
+    const saved = localStorage.getItem(key);
+    if (saved === 'dark') root.classList.add('theme-dark');
+
+    btn?.addEventListener('click', () => {
+      root.classList.toggle('theme-dark');
+      localStorage.setItem(key, root.classList.contains('theme-dark') ? 'dark' : 'light');
+    });
+
+    document.getElementById('updated').textContent =
+      new Date().toLocaleDateString('vi-VN', {year:'numeric', month:'2-digit', day:'2-digit'});
+  </script>
+
+  <!-- JSON-LD: nhớ sửa email/điện thoại/url cho đúng -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Đỗ Khắc Gia Khoa",
+    "jobTitle":"IT student / Junior Full-Stack Developer",
+    "address":{"@type":"PostalAddress","addressLocality":"Hà Nội","addressCountry":"VN"},
+    "email":"mailto:your@email",
+    "telephone":"+84-...",
+    "url":"https://your-portfolio-or-link",
+    "sameAs":[
+      "https://www.facebook.com/tarot.211"
+    ]
+  }
+  </script>
+</body>
+</html>
