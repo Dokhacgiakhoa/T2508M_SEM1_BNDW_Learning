@@ -1,0 +1,95 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: black;
+    color: azure;
+}
+
+div {
+    height: 400px;
+    width: 300px;
+    background-color: blanchedalmond;
+    color: black;
+    border-radius: 10px;
+}
+
+#btnregister {
+    height: auto;
+    width: 80px;
+    background-color: green;
+    color: azure;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
+    box-shadow: 10px;
+}
+
+#btnregister:hover {
+    background-color: azure;
+    color: green;
+    font-weight: 600;
+    cursor: pointer ;
+    border: none;
+}
+
+#btnfollow {
+    height: auto;
+    width: 80px;
+    background-color: orange;
+    color: azure;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 10px;
+    box-shadow: 10px;
+}
+
+#btnfollow:hover {
+    background-color: azure;
+    color: orange;
+    font-weight: 600;
+    border: none;
+    cursor: pointer ;
+}
+
+
+.mybtn {
+    height: auto;
+    width: 80px;
+    color: azure;
+    background-color: red;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
+    font-weight: 600;
+    box-shadow: 10px;
+}
+
+.mybtn:hover {
+    color: red;
+    background-color: azure;
+    border: none;
+    font-weight: 600;
+    cursor: pointer ;
+}
+
+input {
+    margin: 10px;
+    border-radius: 10px;
+    border-color: rgb(70, 131, 200);
+    border: 2px;
+    width: 65%;
+}
+
+label {
+    border: 2px;
+    width: 35%;
+}
+
+.form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: auto;
+    width: auto;
+}
