@@ -1,16 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initaial-scale-1.0">
-  <title>Demo bootstrap</title>
-  <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Animated Product Card — Coca-Cola</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <div class="container">
-    <button class="btn btn-primary">Primary</button>
-  </div>
-</body>
+  <main class="stage">
+    <article class="card" style="--clr:#e50914">
+      <!-- Vòng tròn + logo giữa (trạng thái ban đầu) -->
+      <div class="circle">
+        <div class="ring">
+          <!-- Dùng chữ làm logo; có thể thay bằng <img class="logo" src="logo.png"> -->
+          <div class="logo" aria-hidden="true">Coca-Cola</div>
+        </div>
+      </div>
 
+      <!-- Nội dung xuất hiện sau khi hover -->
+      <div class="content" aria-live="polite">
+        <h2>COCACOLA</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, eveniet!
+           Tối ưu hoá hương vị sảng khoái.</p>
+        <a class="btn" href="#" aria-label="Xem thêm sản phẩm Coca-Cola">Explore more</a>
+      </div>
+
+      <!-- Ảnh chai: thay link bằng ảnh của bạn -->
+      <img class="bottle"
+           src="https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=700&q=60"
+           alt="Chai Coca-Cola">
+    </article>
+  </main>
+</body>
 </html>

@@ -93,3 +93,38 @@ label {
     height: auto;
     width: auto;
 }
+
+.pixel-btn {
+    position: relative;
+    width: 180px;
+    height: 60px;
+    border: none;
+    background: #333;
+    color: #fff;
+    font-size: 1.15em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    outline: none;
+}
+
+.card:hover .circle::before {
+    width: 100%;
+    transition-delay: 0.5s;
+    height: 100%;
+    border-radius: 20px;
+    background: var(--clr);
+}
+
+.card .circle .logo {
+    position: relative;
+    width: 250px;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+}
+
+.card:hover .circle .logo {
+    transform: scale(0);
+    transition-delay: 0s;
+}
+
