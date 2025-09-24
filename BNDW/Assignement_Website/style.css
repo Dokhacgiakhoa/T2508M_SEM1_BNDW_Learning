@@ -1,0 +1,21 @@
+.banner,
+.sub-banner {
+  margin: 0;
+  padding: 0;
+  width: 100vh;
+}
+
+.banner img,
+.sub-banner img {
+  height: 50vh;
+  width: 100vw;
+  object-fit: cover;
+  object-position: 50% 80%;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
