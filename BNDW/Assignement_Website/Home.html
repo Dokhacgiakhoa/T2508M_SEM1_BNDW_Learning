@@ -1,49 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home Page</title>
-    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./style.css" />
-    <script src="../assets/js/bootstrap.bundle.min.js"></script>
   </head>
-  <header>
-    <!-- Menu and logo -->
-    <nav class="navbar">
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Services</a>
-      <a href="#">Contact</a>
-    </nav>
-  </header>
 
   <body>
+    <header>
+      <!-- Menu and logo -->
+      <nav class="navbar">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
     <!-- Slider banner -->
     <div class="banner">
-      <img
-        src="../../../Media/cach-xong-dot-tram-huong.webp"
-        alt="Banner Image"
-      />
+      <img src="./Media/cach-xong-dot-tram-huong.webp" alt="Banner Image" />
     </div>
-    <div class="row" style="width: 100vw; margin: 0">
-      <h2
-        class="col-6"
-        style="
-          text-align: center;
-          background-color: #000;
-          width: 50vw;
-          color: #fff;
-        "
-      >
-        Sub Banner 1
-      </h2>
-      <img
-        class="col-6"
-        src="../../../Media/thac-khoi-tram-huong-quan-am.png"
-        alt="Sub Banner 1"
-        style="width: 50vw"
-      />
+    <!-- Sub banner 1 -->
+    <div class="container" style="width: 100vw; margin: 20px 0 0 0; padding: 0">
+      <div class="row">
+        <div class="col-6 border-primary">Khói thác trầm</div>
+        <div class="col-6 border-primary">
+          <img src="./Media/thac-khoi-tram-huong-1-3.jpg" alt="Sub Banner 1" />
+        </div>
+      </div>
     </div>
+    <!-- js boostrap -->
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
