@@ -1,0 +1,48 @@
+/* Font chung Nunito Sans (nếu dùng) */
+body {
+  font-family: "Nunito Sans", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  background: linear-gradient(135deg, #eef2f7 0%, #ffffff 100%);
+  min-height: 100vh;
+}
+
+/* Card trung tâm */
+.auth-card {
+  backdrop-filter: blur(2px);
+}
+
+/* Icon con mắt nằm bên phải input */
+.toggle-eye {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #6c757d;
+}
+
+.toggle-eye:hover {
+  color: #000;
+}
+
+/* Hiển thị feedback ngay dưới input khi có lỗi */
+.invalid-feedback {
+  display: block;
+}
+
+/* Tăng tương phản state hợp lệ/không hợp lệ (tuỳ chọn) */
+.form-control.is-valid {
+  border-color: #198754;
+}
+.form-control.is-invalid {
+  border-color: #dc3545;
+}
+
+/* Responsive nhẹ trên màn nhỏ */
+@media (max-width: 575.98px) {
+  .auth-card {
+    padding: 1.25rem !important;
+  }
+}
